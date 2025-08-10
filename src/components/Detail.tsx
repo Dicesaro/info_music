@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate, Params } from 'react-router'
+import { useParams, useNavigate } from 'react-router'
+import type { Params } from 'react-router'
 import { useSpotifyToken } from '../hooks/useSpotifyToken.js'
 import axios from 'axios'
 

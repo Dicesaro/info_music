@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-export function useSpotifySearch(token) {
+export function useSpotifySearch(token: string | null): {
+  loading: boolean
+  results: any[]
+  search: (query: string, type: string) => void
+} {
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState([])
 
-  const search = async (query, type) => {
+  const search = async (query: string, type: string) => {
     if (!query) return
     setLoading(true)
     setResults([])

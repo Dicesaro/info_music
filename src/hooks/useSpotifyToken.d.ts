@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { clientId, clientSecret } from '../data'
 import axios from 'axios'
 
-export function useSpotifyToken() {
+export function useSpotifyToken(): string | null {
   const [token, setToken] = useState('')
 
   useEffect(() => {
