@@ -1,8 +1,13 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-export function useSpotifySearch(token: string | null): {
+export function useSpotifySearch({
+  token,
+}: {
+  token: string | null
+}): {
   loading: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   results: any[]
   search: (query: string, type: string) => void
 } {

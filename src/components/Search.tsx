@@ -9,7 +9,7 @@ export default function Search() {
   const token = useSpotifyToken()
   const [query, setQuery] = useState('')
   const [type, setType] = useState('track')
-  const { loading, results, search } = useSpotifySearch(token)
+  const { loading, results, search } = useSpotifySearch({ token })
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
