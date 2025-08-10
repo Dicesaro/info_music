@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router'
 import type { Params } from 'react-router'
-import { useSpotifyToken } from '../hooks/useSpotifyToken.js'
+import { useSpotifyToken } from '../hooks/useSpotifyToken'
 import axios from 'axios'
 
 interface Artist {
