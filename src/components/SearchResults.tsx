@@ -4,6 +4,9 @@ import { Link } from 'react-router'
 interface ItemProps {
   id: string
   name: string
+  artists?: { name: string }[]
+  type: 'track' | 'artist' | 'album'
+  album_type?: string
   // ...otros campos necesarios
 }
 
@@ -15,7 +18,7 @@ export default function SearchResults({
   results,
 }: SearchResultsProps) {
   // Detectar el tipo del resultado (track, artist, album) usando la estructura del primer item
-  const getType = (item) => {
+  const getType = (item: ItemProps) => {
     if (item.type) return item.type
     if (item.album_type) return 'album'
     if (item.artists) return 'track'
